@@ -210,6 +210,16 @@ something to gossip while talking about how information theory came about.)
 
 
 
+\subsection{Use extreme cases to push understanding to a limit}
+\begin{example}
+    [An extreme case to understand reduency and compression and ``randomness''.]
+    When a message is not yet totally random, it contains redundancy.
+
+    {\Huge More examples to come}
+\end{example}
+
+More examples to be included.
+
 \subsection{Paul's lecturing (15 minutes)}
 Paul agreed to cover:
 \begin{itemize}
@@ -219,15 +229,11 @@ Paul agreed to cover:
 \end{itemize}
 
 
-\begin{example}
-    [An extreme case to understand reduency and compression and ``randomness''.]
-    When a message is not yet totally random, it contains redundancy.
-\end{example}
-
 
 \subsection{Nicole's lecturing + connecting with future materials (15 minutes)}
 \begin{itemize}
-    \item Connect notion of redundancy and compression to:
+    \item Communication is two-way ``flow of information''
+    \item Relate the whole reading to:
         \begin{itemize}
             \item Common ground;
             \item Classification
@@ -237,7 +243,49 @@ Paul agreed to cover:
 \end{itemize}
 
 
+
 \section{Part 2: second 1.5 hours}
+Well, given a minimum of 10 minutes break in between, 80 minutes is the target
+here.
+
+\subsection{Game: demonstrating the diagram in a concrete setting (25 minutes) }
+For designing the game, we may want to control for the following factors
+independently (i.e. introducing one factor at a time). Each game shall take
+around 15 minutes or so;
+\begin{itemize}
+    \item Compression: from sentence to graph, and then back to sentence;
+    \item Noise through the channel: plot a message, and have someone to doodle
+        on it (noise), and have the receiver decipher.
+\end{itemize}
+The goal is to mimic a controlled environment.
+
+\subsubsection{ Potential things to add to the Game }
+\begin{itemize}
+    \item Measure of ``entropy'' per message. $\implies$ This would need a more
+        carefully defined set of ``potential messages'', on top of which we
+        could derive the background distribution/density-function.
+    \item Demonstrate how noise would affect entropy?
+\end{itemize}
+
+\subsection{On definition of Entropy}
+\begin{definition}
+    For discrete distribution,
+    \[
+        H(\tilde x) = - \sum p_i \log_{2} p_i
+    \]
+\end{definition}
+
+\subsubsection{About the probability distribution:}
+When calculating the entropy of a random variable, we only use ``true
+probability''.
+
+\subsubsection{Measure of surprisal? One that is defined over subjectively
+assigned information.}
+Surprisal defined on Wiki has a functional form that resembles entropy. For the
+coin-flipping case, the value is exactly the same. I doubt if surprisal would
+really serve the need for comparison.
+
+
 
 
 
