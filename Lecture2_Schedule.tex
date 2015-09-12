@@ -187,19 +187,6 @@ For the first 80 minutes, Paul will be around.
 
 \subsection{Opening: summary and stories (30 min)}
 
-\subsubsection{What's new: theory and concepts}
-\begin{itemize}
-    \item Diagram of Information Source, Transmitter, Noise Source, Receiver,
-        Destination;
-    \item Entropy:
-        \begin{itemize}
-            \item Foundation: discrete probability distribution and probability density function;
-            \item definition (for discrete case).
-        \end{itemize}
-    \item Turing test as an (old) standard for Artificial Intelligence
-\end{itemize}
-
-
 \subsubsection{Interesting stories from bibliographical reading (10-15 min)}
 \begin{itemize}
     \item Inspire, and have people to talk about it. (Rephrase the question)
@@ -209,21 +196,55 @@ For the first 80 minutes, Paul will be around.
 something to gossip while talking about how information theory came about.)
 
 
+\subsubsection{What's new: theory and concepts}
+\begin{itemize}
+    \item Entropy: measure for information.
+        \begin{itemize}
+            \item A measure of information with units as `bits'.
+            \item More technical details comes after the break. %When Paul is gone.
 
-\subsection{Use extreme cases to push understanding to a limit}
-\begin{example}
-    [An extreme case to understand reduency and compression and ``randomness''.]
-    When a message is not yet totally random, it contains redundancy.
+        \end{itemize}
+    \item Diagram of Information Source, Transmitter, Noise Source, Receiver,
+        Destination;
+        \begin{itemize}
+            \item Compression Lossy vs Lossless
+                \begin{enumerate}
+                    \item  Summary vs Excerpt
+                    \item Diff (for storage and version control)
+                \end{enumerate}
+        \end{itemize}
+    \item Further discussion on applications/understandings of Entropy (Need to
+        post these questions and lead the discussion)
+        \begin{itemize}
+            \item When a message is not yet random, it contains redundancy.
+            \item {Underdog wins}
+            \item {Redundancy does not increase or decrease entropy}
+        \end{itemize}
+    \item Turing test as an (old) standard for Artificial Intelligence
+\end{itemize}
 
-    {\Huge More examples to come}
-\end{example}
 
-More examples to be included.
+\begin{verbatim}
+1. Can machines think? 1950
+   1. Building on the work regarding the universal machine.
+   2. Turing continued to ask “What can a machine not do?”
+   3. Turing Test.
+Questions: What’s the turing test? How are the Turing test and Entropy related?
+\end{verbatim}
+
+
+
+
+
+
+
+
+
 
 \subsection{Paul's lecturing (15 minutes)}
 Paul agreed to cover:
 \begin{itemize}
-    \item Connection among compression, redundancy and Entropy?
+    \item compression
     \item Comparison among: completing texts (texting on iPhone) and generating
         text (Turing test)
 \end{itemize}
@@ -248,26 +269,10 @@ Paul agreed to cover:
 Well, given a minimum of 10 minutes break in between, 80 minutes is the target
 here.
 
-\subsection{Game: demonstrating the diagram in a concrete setting (25 minutes) }
-For designing the game, we may want to control for the following factors
-independently (i.e. introducing one factor at a time). Each game shall take
-around 15 minutes or so;
-\begin{itemize}
-    \item Compression: from sentence to graph, and then back to sentence;
-    \item Noise through the channel: plot a message, and have someone to doodle
-        on it (noise), and have the receiver decipher.
-\end{itemize}
-The goal is to mimic a controlled environment.
-
-\subsubsection{ Potential things to add to the Game }
-\begin{itemize}
-    \item Measure of ``entropy'' per message. $\implies$ This would need a more
-        carefully defined set of ``potential messages'', on top of which we
-        could derive the background distribution/density-function.
-    \item Demonstrate how noise would affect entropy?
-\end{itemize}
-
-\subsection{On definition of Entropy}
+\subsection{On definition of Entropy (20min) }
+        \begin{itemize}
+            \item Foundation: discrete probability distribution and probability density function;
+        \end{itemize}
 \begin{definition}
     For discrete distribution,
     \[
@@ -279,14 +284,165 @@ The goal is to mimic a controlled environment.
 When calculating the entropy of a random variable, we only use ``true
 probability''.
 
-\subsubsection{Measure of surprisal? One that is defined over subjectively
-assigned information.}
-Surprisal defined on Wiki has a functional form that resembles entropy. For the
-coin-flipping case, the value is exactly the same. I doubt if surprisal would
-really serve the need for comparison.
+%\subsubsection{Measure of surprisal? One that is defined over subjectively
+%assigned information.}
+%Surprisal defined on Wiki has a functional form that resembles entropy. For the
+%coin-flipping case, the value is exactly the same. I doubt if surprisal would
+%really serve the need for comparison.
 
 
+\subsection{Game on word perdiction (20 min)}
+Would a human being be better at next word prediction?  We could test this in
+class…  half the class could use phones to do the word prediction on their
+phones, half the class could compete what they think the next word is.  just a
+version of the shannon game. [Re-write + more detials]
+(Common starting point)
+
+
+
+%\subsection{Game: demonstrating the diagram in a concrete setting (25 minutes) }
+%For designing the game, we may want to control for the following factors
+%independently (i.e. introducing one factor at a time). Each game shall take
+%around 15 minutes or so;
+%\begin{itemize}
+%    \item Compression: from sentence to graph, and then back to sentence;
+%    \item Noise through the channel: plot a message, and have someone to doodle
+%        on it (noise), and have the receiver decipher.
+%\end{itemize}
+%The goal is to mimic a controlled environment.
+%\subsubsection{ Potential things to add to the Game }
+%\begin{itemize}
+%    \item Measure of ``entropy'' per message. $\implies$ This would need a more
+%        carefully defined set of ``potential messages'', on top of which we
+%        could derive the background distribution/density-function.
+%    \item Demonstrate how noise would affect entropy?
+%\end{itemize}
+
+\subsection{Discussion}
+\begin{itemize}
+    \item Effects of text prediction on behaviour/communication patterns? Also,
+        ethics of training data used, biases introduced by the data perpetuating
+        existing biases in society.
+    \item What would be the problem if computers turned out to be intelligent?
+
+    \item Summarize the Ashley Madison and ask people's opinions.
+\end{itemize}
 
 
 
 \end{document}
+
+Chronological Outline for SI701 Week 2 Page
+Outline
+1. Writing (the creation of symbol storage) catalyzed logic.
+   1. Axioms, Signs, Formulas, Proofs
+1. History of the pursuit for “Perfectly precise expression”
+   1. Leibniz 1678- “A certain script of language that perfectly represents the relationships between our thoughts”
+Question: What else do you know about Leibniz?
+   1. Boole- Early 1800’s The Laws of Thought (Formalized expression)
+   2. Babbage-  Mid 1800’s Difference Engine (Sought precision)
+1. Melding logic and math.
+   1. Bertrand Russell and Alfred North Whitehead: Formalists (also David Hilbert) Sought perfection “formal certainty”.
+      1. Is mathematics complete?
+      2. Is mathematics consistent?
+      3. Is mathematics decidable?
+Question: What does decidable mean?
+1. Principia Mathematica 1910
+   1. Russell and Whitehead used a formalized structure that tried to create a set of rules to that could be used to prove all mathematical truths.
+      1. Obtained through the usage of Symbolic Logic
+         1. Applying formal logic rules to math.
+   1. Contrast between symbolism and ordinary language
+      1. Language builds on knowledge and experience of real things
+      2. Symbols in the PM system should not require this same kind of knowledge
+      3. Syntactic versus semantic
+         1. Syntax is concerned with the rules used for constructing, or  transforming the symbols and words of a language, as contrasted with the semantics of a language which is concerned with its meaning.
+   1. Paradoxes were getting in the way
+      1. This statement is false.
+      2. Berry’s Paradox- The least integer not nameable in fewer than nineteen syllables. (The previous sentence is only 18 syllables.)
+      3. Barber Paradox- Who shaves the barber? (Sets within sets paradox.)
+   1. The PM would not allow self-reference or self containment.
+   2. Gödel said with the PM “one can prove any theorem using nothing but a few mechanical rules”
+1. Kurt Gödel
+   1. Originally examined Metamathmatics- Math from the outside
+   2. 1931 “[Gödel] was about to make the most important statement, prove the most important theorem about knowledge in the twentieth century. He was going to kill Russell’s dream of a perfect logical system” (Gleick pg.181)
+   3. Shows that no complete and consistent system can exist.
+   4. Gödel mapping.
+      1. Every symbol within a statement can be translated into a numerical value which has relationships between them which makes it a statement about numbers. Takes a linguistic paradox and encodes it into number theory. “This statement cannot be proved”
+      2. Setup the 1-1 correspondence to math and statements about math. Gödel uses prime numbers because of their uniqueness which allows these numbers to encode statements about other numbers.
+   1. There are true statements about numbers that cannot be proven.
+   2. Math cannot be complete and consistent.
+1. Characteristica universalis “Numbers could encode all of reasoning”  (Gleick pg.185)
+2. Alan Turing
+   1. The feasibility of machines that could analyze symbols allows for the thought:
+   2. Are all numbers computable? (On computable numbers... 1936)
+      1. A number is computable if its decimal could be written down by a machine. (Gleick pg. 207)
+      2. No machine at the time could actually compute.
+      3. Using the typewriter (Invented in the 1860’s) as a framework Turing theorized a machine called U (universal machine).
+         1. Tape- long strip, divided into squares, infinite, record on
+         2. Symbols- written on tape, 1 per square, binary
+         3. Scanner- Reads symbols ,only one at a time
+         4. States- “States of mind”, Set of instructions for what to do when encountering certain symbols
+      1. Turing shows that U through its algorithms could arrive at uncomputable or even paradoxical algorithms which never end.
+      2. These broken algorithms which can be encoded into numbers prove that mathematics is undecidable. (Gleick pg.211)
+Questions: What did I get wrong? What didn’t make sense? Why is this important?
+
+
+Flashback!
+Question: Does anyone else want to summarize Bell Telephones expansion into Bell Labs?
+1. Bell Telephones
+   1. Late 1800’s to the early 1900’s telephone’s rapidly became apart of the US landscape.
+   2. Switch Board becomes necessary to accommodate
+   3. Switches boards are seen as “electrical brains”
+   4. Bell Labs was created out of necessity.
+      1. Complexities multiplied which created the need for mathematicians
+   1. Harry Nyquist 1920’s Tackling the physical components related to transmitting data.
+   2. Ralph Hartley- Attempt to pin down the concept of information in transmission. “He was attempting to subtract human knowledge from the equation”!
+   3. Normalization- People began to feel that it was natural to possess machines dedicated to sending and receiving messages. (Gleick pg.170)
+1. Claude Shannon
+   1. Shannon as a child liked to tinker and liked puzzles
+   2. 1932 Shannon goes to UM (Go Blue!)
+   3. 1936 Goes to MIT to work with Vannevar Bush
+      1. “Mathematician is not a man who can manipulate figures... he is primarily an individual who is skilled in the use of Symbolic Logic” -Bush
+   1. Shannon goes to Princeton in 1940 for PostDoc
+      1. Princeton is a hub of activity in science, but the work there is not what shannon had hoped.
+End flashback
+1. WWII
+   1. 1940 Gödel comes to Princeton to get out of Europe.
+   2. 1940 Shannon leaves Princeton for Bell Labs hopefully to pursue the “transmission of intelligence”
+   3. Vannevar Bush heading the National Defense Research Committee.
+   4. 1942 Turing goes to America to aid the US in their cryptanalysis. He visits Bell Labs.
+Question: How do you feel about the diversion of research towards the war effort?
+
+1. Bell Labs
+   1. Claude Shannon
+      1. Machine gun tracking- reducing the “noise”
+      2. Saw the work of Nyquist and Hartley as promising in the drive towards unification. “They were representing the whole world as symbols in electricity”
+   1.  Shannon and Turing 1943
+      1. Turing and Shannon were cryptanalysts
+         1. Shannon- Encrypting voices
+         2. Turing- Decrypting Enigma (In England not in US)
+1. The Mathematical Theory of Communication - Shannon 1948
+   1. “Scientifically evaluating ‘communication’” (Christian pg.222)
+      1. Text prediction and text generation turn out to be mathematically equivalent.
+      2. Binary Digit = bit... neat.
+         1. Building block for the concept of electronic storage systems
+      1. Hijacking Information
+         1. “Had to eradicate ’meaning’” (Gleick pg.219)
+Question: Why is it necessary to eradicate meaning in order to evaluate communication?
+      1. Noise and Entropy!
+Question: Who wants to explain Entropy? What questions do you have about it?
+
+
+
+Discussion questions:
+1. Would a human being be better at next word prediction?  We could test this in class…  half the class could use phones to do the word prediction on their phones, half the class could compete what they think the next word is.  just a version of the shannon game.
+3. What type of experiences and information would make you more human that what you already are?
+4. Christian offers movie previews as examples of entropy in excerpts. Let's watch this preview on Frozen and discuss how much entropy we find on it.
+5. Both cryptanalysis and compression have an inversely proportional relation with redundancy. Why?
+6. If scholarly forms of writing such as literature reviews are lossy compressions of larger datasets, how can we ensure such compressions retain a high information value?
+7. Could shannon have done what he did if he spoke chinese?
+8. How do you think a test would go where the computer makes a judgement about whether the other is human or machine?
+9. Why is a lossy filter required to compress most information?
+10. Which is more valuable, interactions which produce low changes in entropy,
+    or high?  why?
+
