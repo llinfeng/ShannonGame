@@ -2,45 +2,243 @@
 %     Created: Fri Sep 11 04:00 PM 2015 EDT
 % Last Change: Fri Sep 11 04:00 PM 2015 EDT
 %
-\documentclass[a4paper]{article}
+\documentclass[12pt]{article}
 % Package for non-breaking words
 \usepackage[none]{hyphenat}
+\usepackage[margin=1in]{geometry}
 
-\title{Schedule for Week 2 of SI 701: Information Theory and Artificial
+% For standard math
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+%Set up the margins
+%\usepackage[left=.7in,right=.7in,top=.7in,bottom=.7in]{geometry}
+\usepackage{amssymb,amsmath,amsthm,mathrsfs,verbatim,upgreek}
+\usepackage{extarrows}%% For extending the equal sign when there is   \xlongequal{<stuff>}
+%\sout{} strike through!
+\usepackage{marginnote}%\marginnote{}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%Create a header at the top of every page
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\usepackage{pdfpages} %merge pdf with: \includepdfmerge{heine-borel_proof.pdf,-}
+\usepackage{graphicx}%to input images \includegraphics[width=130mm]{Open_Open}
+\usepackage{lipsum}
+\usepackage{color}
+%You can define commands for the things you use frequently.
+\newcommand{\al}{\aleph}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\c}{\mathfrak c}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathfrak E}
+\renewcommand{\L}{{\mathcal L}}
+\newcommand{\M}{\mathcal M}
+\newcommand{\N}{{\mathbb N}}
+\renewcommand{\P}{\mathcal {P}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\X}{{\mathlarger{\mathcal X}}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\WLOG}{With out loss of generality}
+\newcommand{\card}{\text{card }}
+
+% The limits.
+\newcommand{\limk}{\underset{k\to\infty}\lim}
+\newcommand{\limn}{\underset{n\to\infty}\lim}
+\newcommand{\liminfn}{\underset{n\to\infty}{\underline{\lim}}}
+\newcommand{\liminfk}{\underset{k\to\infty}{\underline{\lim}}}
+\newcommand{\liminfp}{\underset{p\to\infty}{\underline{\lim}}}
+\newcommand{\liminfj}{\underset{j\to\infty}{\underline{\lim}}}
+\newcommand{\limsupn}{\underset{n\to\infty}{\overline{\lim}}}
+\newcommand{\limsupk}{\underset{k\to\infty}{\overline{\lim}}}
+\newcommand{\limsupp}{\underset{p\to\infty}{\overline{\lim}}}
+\newcommand{\limsupr}{\underset{r\to\infty}{\overline{\lim}}}
+\newcommand{\sgn}{\text{sgn}}
+% For L^p space
+\newcommand{\Linfty}{{L^\infty(E)}}
+\newcommand{\Lp}{{L^{p}(E)}}
+\newcommand{\Lq}{{L^{q}(E)}}
+\usepackage{mdframed}%needed for box like theorems.\newmdtheoremenv %In the box, the footnotes are more handy! ^.^
+% Additional structures, enumerated through section number.
+% Found as of 2015-06-30
+% Fonts in the environments will be normal (standing straight up)
+\theoremstyle{definition}
+% Define all the theorem-based environments.
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{THM}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{claimbox}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{cookbook}[theorem]{Cookbook}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem*{exercise_nonum}{Exercise}
+\newtheorem{fact}[theorem]{Facts}
+\newtheorem{idea}[theorem]{Idea}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark_box}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newmdtheoremenv{example}{Example}
+\newmdtheoremenv{question_sqrt}{Question}
+\newmdtheoremenv{typo}{Typo Correction}
+% Found as of 2015-06-30
+% Fonts will resume to be italic in for the environments thereafter.
+\theoremstyle{plain}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem*{defn}{Definition}
+\newtheorem*{rudin}{Rudin Says}
+\newtheorem*{problem}{\textcolor[rgb]{1.00,0.00,0.00}{Problem}}
+\usepackage{mathrsfs} % enable people to use \mathscr{A}
+\usepackage{color}
+\usepackage{xcolor}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\newcommand{\highlight}[1]{%
+ \colorbox{yellow!50}{$\displaystyle#1$}}
+
+\usepackage{bbm}
+\usepackage{relsize} % For large symbles: \mathlarger{math_expression}
+\usepackage{marvosym} %
+\usepackage{enumerate}
+%\usepackage{enumitem} % For using: \begin{itemize}[leftmargin=-.5in]
+%\usepackage{comment}
+% To make footnote numering by section.
+\makeatletter
+\@addtoreset{footnote}{section}
+\makeatother
+\usepackage{colonequals}
+
+% Package for including footnotes to section-titles
+\usepackage[stable]{footmisc}
+
+% Highlighting:
+\usepackage{xcolor}
+\usepackage{newverbs}
+\newverbcommand{\bverb}
+{\begin{lrbox}{\verbbox}}
+{\end{lrbox}\colorbox{blue!30}{\box\verbbox}}
+\newverbcommand{\yverb}
+{\begin{lrbox}{\verbbox}}
+{\end{lrbox}\colorbox{yellow!50}{\box\verbbox}}
+\newverbcommand{\gverb}
+{\begin{lrbox}{\verbbox}}
+{\end{lrbox}\colorbox{green!30}{\box\verbbox}}
+\newverbcommand{\rverb}
+{\begin{lrbox}{\verbbox}}
+{\end{lrbox}\colorbox{red!30}{\box\verbbox}}
+\newverbcommand{\grayverb}
+{\begin{lrbox}{\verbbox}}
+{\end{lrbox}\colorbox{gray!30}{\box\verbbox}}
+
+% For := symbol \coloneqq
+\usepackage{mathtools}
+
+% For large \mid (as conditional)
+\usepackage{mleftright}
+%\[
+%L = \sup \mleft\{\, \sum_{x \in F} a(x) \;\middle|\; F \subset X,\, |F| < \infty \,\mright\},
+%\]
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+
+
+
+
+% Check-marks
+\usepackage{pifont} % http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+% Strike through
+\usepackage[normalem]{ulem}
+% Example: \sout{Hello World}
+
+% Putting a box around paragraph
+\usepackage{mdframed}
+% \begin{mdframed}
+
+% Putting a bar below: \barbelow{something}
+\usepackage{stackengine}
+\newcommand\barbelow[1]{\stackunder[1.2pt]{$#1$}{\rule{.8ex}{.075ex}}}
+
+
+\title{Schedule for Week 2 of SI 701: \\Information Theory and Artificial
 Intelligence}
 \author{Meghana \& Linfeng }
 
 
 \begin{document}
 \maketitle
-\section{Part 1: with Paul}
+\section{Part 1: while Paul is in the room}
 For the first 80 minutes, Paul will be around.
 
-\subsection{Opening: summary and stories}
+\subsection{Opening: summary and stories (30 min)}
 
-\subsubsection{Summary for the information theory: general impression}
-About the definition of information theory and then the connection.
+\subsubsection{What's new: theory and concepts}
+\begin{itemize}
+    \item Diagram of Information Source, Transmitter, Noise Source, Receiver,
+        Destination;
+    \item Entropy:
+        \begin{itemize}
+            \item Foundation: discrete probability distribution and probability density function;
+            \item definition (for discrete case).
+        \end{itemize}
+    \item Turing test as an (old) standard for Artificial Intelligence
+\end{itemize}
 
-\subsubsection{Interesting stories from bibliographical reading}
-Inspire, and have people to talk about it.
+
+\subsubsection{Interesting stories from bibliographical reading (10-15 min)}
+\begin{itemize}
+    \item Inspire, and have people to talk about it. (Rephrase the question)
+\end{itemize}
+
+(The goal is to get people as tomorrow's ``PhD in Information'' know about
+something to gossip while talking about how information theory came about.)
 
 
-\subsection{Paul's lecturing}
-Paul agreed to cover: (15 minutes)
-* [ ] Connection among compression, redundancy and Entropy?
-      When a message is not yet totally random, it contains redundancy.
 
-    * Also: completing texts (texting on iPhone) and generating text (Turing test)
+\subsection{Paul's lecturing (15 minutes)}
+Paul agreed to cover:
+\begin{itemize}
+    \item Connection among compression, redundancy and Entropy?
+    \item Comparison among: completing texts (texting on iPhone) and generating
+        text (Turing test)
+\end{itemize}
 
-\subsection{Nicole's lecturing + connecting with future materials}
-* [ ] (Huge question) Connect notion of redundancy and compression to:
-      * Common ground;
-      * Classification
-      * Prospect theory
+
+\begin{example}
+    [An extreme case to understand reduency and compression and ``randomness''.]
+    When a message is not yet totally random, it contains redundancy.
+\end{example}
+
+
+\subsection{Nicole's lecturing + connecting with future materials (15 minutes)}
+\begin{itemize}
+    \item Connect notion of redundancy and compression to:
+        \begin{itemize}
+            \item Common ground;
+            \item Classification
+            \item Prospect theory
+            \item $\cdots$$\cdots$$\cdots$$\cdots$$\cdots$$\cdots$$\cdots$
+        \end{itemize}
+\end{itemize}
 
 
 \section{Part 2: second 1.5 hours}
 
+
+
 \end{document}
-
-
